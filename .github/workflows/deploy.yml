@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: 22
       - run: npm ci --no-audit
+      - run: ls -la node_modules/@astrojs/
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
