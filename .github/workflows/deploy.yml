@@ -22,8 +22,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install --no-audit --no-fund --legacy-peer-deps
-      - run: ls -la node_modules/@astrojs/
+      - run: npm ci --no-audit
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
