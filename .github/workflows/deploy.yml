@@ -23,7 +23,8 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
+          cache-dependency-path: package-lock.json
+      - run: npm ci --prefer-offline --no-audit
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
