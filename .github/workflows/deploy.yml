@@ -23,7 +23,8 @@ jobs:
         with:
           node-version: 22
       - run: cat package-lock.json | grep -A 5 '"@astrojs/mdx"'
-      - run: npm install --no-audit --no-fund --registry=https://registry.npmjs.org --legacy-peer-deps
+      - run: npm install @astrojs/mdx@8.1.6 --no-audit --no-fund --registry=https://registry.npmjs.org
+      - run: npm install --no-audit --no-fund --registry=https://registry.npmjs.org
       - run: ls -la node_modules/@astrojs/
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
